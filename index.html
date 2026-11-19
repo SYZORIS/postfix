@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>POSTFIX — arrive soon</title>
+  <meta name="description" content="POSTFIX — minimalist, ultra-fast, precision hero landing page.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A0A0A'/><text x='16' y='22' font-family='-apple-system, sans-serif' font-weight='800' font-size='18' fill='%23FFFFFF' text-anchor='middle'>P</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+  <!-- GSAP 3 for Apple keynote-grade 60fps entrance timeline -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Ambient Cursor Sheen (reactive radial light follows cursor) -->
+  <div class="ambient-sheen" aria-hidden="true"></div>
+
+  <!-- Custom Magnetic Cursor Elements -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true">
+    <div class="cursor-ring-inner"></div>
+  </div>
+
+  <!-- Main Viewport Canvas -->
+  <main class="hero-viewport" id="heroViewport">
+
+    <!-- Top Video-Timeline Accent / HUD -->
+    <header class="hud-top" aria-hidden="true">
+      <div class="hud-group hud-left">
+        <span class="hud-indicator"></span>
+        <span class="hud-mono">MASTER TIMELINE</span>
+      </div>
+      <div class="hud-group hud-center">
+        <span class="hud-mono hud-timecode" id="timecodeDisplay">00:00:01:00</span>
+      </div>
+      <div class="hud-group hud-right">
+        <span class="hud-mono hud-badge">POSTFIX STUDIO</span>
+      </div>
+    </header>
+
+    <!-- Center Stage Hero Content -->
+    <div class="hero-stage" id="heroStage">
+      <div class="hero-tilt-target" id="heroTiltTarget">
+        <!-- 
+          HEADLINE TEXT TOGGLE:
+          To switch headline text, simply edit the text content below 
+          between "POSTFIX" and "FIXED POST" (or change data-text):
+        -->
+        <h1 class="hero-title" id="heroTitle" data-text="POSTFIX">POSTFIX</h1>
+        <!-- Alternate: <h1 class="hero-title" id="heroTitle" data-text="FIXED POST">FIXED POST</h1> -->
+
+        <p class="hero-subtext" id="heroSubtext">arrive soon</p>
+      </div>
+    </div>
+
+    <!-- Bottom Edge Video-Timeline Polish / Subtle Hairline Accent -->
+    <footer class="hud-bottom" aria-hidden="true">
+      <div class="hud-hairline">
+        <span class="hud-hairline-progress"></span>
+      </div>
+      <div class="hud-bottom-bar">
+        <span class="hud-mono hud-faint">24.00 FPS • PRORES 4444 XQ</span>
+        <span class="hud-mono hud-faint hud-coords" id="coordsDisplay">X: 0000 Y: 0000</span>
+        <span class="hud-mono hud-faint">© 2026 POSTFIX INC.</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
